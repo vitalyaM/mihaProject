@@ -128,8 +128,15 @@ window.addEventListener('DOMContentLoaded', () => {
     const estimateValue = +estimate.value;
     const peoplesCountValue = +peoplesCount.value;
 
-    const tipCount = moneyValue * (estimateValue / 100) / peoplesCountValue;
-    tip.textContent = Math.round(tipCount);
+    if (isNaN(+moneyValue) ||
+      isNaN(+peoplesCountValue) ||
+      !moneyValue ||
+      !peoplesCountValue) {
+      tip.textContent = 'так нельзя';
+    } else {
+      const tipCount = moneyValue * (estimateValue / 100) / peoplesCountValue;
+      tip.textContent = Math.round(tipCount);
+    }
   });
   //* CALC ==============================================================
 });
