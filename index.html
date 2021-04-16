@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Таймер</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header" id="header">
+      <nav>
+        <ul>
+          <li>
+            <a class="current" href="#alarmClock">Будильник</a>
+          </li>
+          <li>
+            <a href="#calc">Калькулятор</a>
+          </li>
+          <li>
+            <a href="#todo">ToDo</a>
+          </li>
+          <li>
+            <a href="#news">Новости</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div id="alarmClock">
+        <div class="bg">
+          <img src="../img/bg.png" alt="background" loading="lazy" />
+        </div>
+        <div class="content">
+          <div class="time" id="time">
+            <span id="hours"></span>
+            <span>:</span>
+            <span id="minutes"></span>
+            <span>:</span>
+            <span id="seconds"></span>
+          </div>
+          <select name="timer" id="timer">
+            <option value="1 minutes">1 минута</option>
+            <option value="5 minutes">5 минут</option>
+            <option value="10 minutes">10 минут</option>
+            <option value="30 minutes">30 минут</option>
+            <option value="1 hour">1 час</option>
+            <option value="3 hour">3 часа</option>
+          </select>
+          <button class="button" id="setTimer" type="button">Поставить будильник</button>
+        </div>
+      </div>
+
+      <div id="calc">
+        <div class="bg">
+          <img src="../img/bg2.png" alt="background" loading="lazy" />
+        </div>
+        <div class="content">
+
+          <div class="form-tips">
+            <div class="form-tips__col form-tips__col_money">
+              <label for="money">Сумма счета:</label>
+              <input id="money" autocomplete="off" type="text" name="money" placeholder="" value="3000" />
+              <span>Р</span>
+            </div>
+            <div class="form-tips__col">
+              <label for="estimate">Оцените сервис:</label>
+              <select name="estimate" id="estimate">
+                <option value="30">Лучше не пробовал, 30%</option>
+                <option value="20">ЗБС, 20%</option>
+                <option value="10">Средне, 10%</option>
+                <option value="5">Славик педик, 5%</option>
+              </select>
+            </div>
+            <div class="form-tips__col">
+              <label for="peoplesCount">Колличество человек:</label>
+              <input id="peoplesCount" autocomplete="off" type="text" name="money" value="3" placeholder="" />
+            </div>
+          </div>
+
+          <div id="tip">
+            <span>Сумма чаевых</span>
+            <span class="tip-count">200</span>
+            <span>с каждого</span>
+          </div>
+
+          <button class="button" id="countTips" type="button">Расчитать</button>
+        </div>
+      </div>
+      <div id="todo">
+        TODO
+      </div>
+      <div id="news">
+        NEWS
+      </div>
+    </main>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
